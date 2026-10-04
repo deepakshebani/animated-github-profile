@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" width="860" height="400" role="img" aria-label="Pipeline: photo to ASCII portrait, details to info card, contributions page to heatmap, all composed in README and refreshed daily by GitHub Actions">
+<style>
+.f{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,DejaVu Sans Mono,Liberation Mono,monospace}
+.lbl{font-size:11px;fill:#8b949e}
+.t{font-size:12px}
+.lane{opacity:0;animation:in .6s ease-out forwards}
+@keyframes in{to{opacity:1}}
+</style>
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#8b949e"/></marker>
+<marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#39d353"/></marker>
+</defs>
+<rect x="0.5" y="0.5" width="859" height="399" rx="12" fill="#0d1117" stroke="#30363d"/>
+<text class="f lbl" x="20" y="28">INPUT</text>
+<text class="f lbl" x="186" y="28">SCRIPTS (python)</text>
+<text class="f lbl" x="526" y="28">OUTPUT (animated svg)</text>
+<text class="f lbl" x="706" y="28">PROFILE</text>
+
+<!-- lane 1: portrait -->
+<g class="lane" style="animation-delay:.2s">
+<rect x="12" y="48" width="150" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+<text class="f t" x="87" y="70" text-anchor="middle" fill="#c9d1d9">your photo</text>
+<text class="f lbl" x="87" y="88" text-anchor="middle">.jpg / .png</text>
+<rect x="182" y="48" width="150" height="52" rx="8" fill="#0c2d6b" fill-opacity=".35" stroke="#58a6ff"/>
+<text class="f t" x="257" y="70" text-anchor="middle" fill="#58a6ff">prep_photo.py</text>
+<text class="f lbl" x="257" y="88" text-anchor="middle">cut-out, contrast</text>
+<rect x="352" y="48" width="150" height="52" rx="8" fill="#0c2d6b" fill-opacity=".35" stroke="#58a6ff"/>
+<text class="f t" x="427" y="70" text-anchor="middle" fill="#58a6ff">make_ascii_svg.py</text>
+<text class="f lbl" x="427" y="88" text-anchor="middle">glyphs, shading</text>
+<rect x="522" y="48" width="160" height="52" rx="8" fill="#04260f" stroke="#39d353"/>
+<text class="f t" x="602" y="78" text-anchor="middle" fill="#69f0a0">ascii-portrait.svg</text>
+<line x1="162" y1="74" x2="180" y2="74" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="332" y1="74" x2="350" y2="74" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="502" y1="74" x2="520" y2="74" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+</g>
+
+<!-- lane 2: info card -->
+<g class="lane" style="animation-delay:.6s">
+<rect x="12" y="138" width="150" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+<text class="f t" x="87" y="160" text-anchor="middle" fill="#c9d1d9">your details</text>
+<text class="f lbl" x="87" y="178" text-anchor="middle">ROWS in the script</text>
+<rect x="182" y="138" width="320" height="52" rx="8" fill="#0c2d6b" fill-opacity=".35" stroke="#58a6ff"/>
+<text class="f t" x="342" y="160" text-anchor="middle" fill="#58a6ff">make_info_card.py</text>
+<text class="f lbl" x="342" y="178" text-anchor="middle">neofetch-style key : value lines</text>
+<rect x="522" y="138" width="160" height="52" rx="8" fill="#04260f" stroke="#39d353"/>
+<text class="f t" x="602" y="168" text-anchor="middle" fill="#69f0a0">info-card.svg</text>
+<line x1="162" y1="164" x2="180" y2="164" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="502" y1="164" x2="520" y2="164" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+</g>
+
+<!-- lane 3: heatmap, inside the Actions loop -->
+<g class="lane" style="animation-delay:1s">
+<rect x="174" y="214" width="516" height="96" rx="10" fill="none" stroke="#d29922" stroke-dasharray="5 4"/>
+<text class="f lbl" x="186" y="300" fill="#d29922" style="fill:#d29922">GitHub Actions, every day 06:17 UTC</text>
+<rect x="12" y="228" width="150" height="52" rx="8" fill="#161b22" stroke="#30363d"/>
+<text class="f t" x="87" y="250" text-anchor="middle" fill="#c9d1d9">contributions</text>
+<text class="f lbl" x="87" y="268" text-anchor="middle">public page, no token</text>
+<rect x="182" y="228" width="150" height="52" rx="8" fill="#0c2d6b" fill-opacity=".35" stroke="#58a6ff"/>
+<text class="f t" x="257" y="250" text-anchor="middle" fill="#58a6ff">fetch_contributions</text>
+<text class="f lbl" x="257" y="268" text-anchor="middle">scrape, streaks</text>
+<rect x="352" y="228" width="150" height="52" rx="8" fill="#0c2d6b" fill-opacity=".35" stroke="#58a6ff"/>
+<text class="f t" x="427" y="250" text-anchor="middle" fill="#58a6ff">render_heatmap</text>
+<text class="f lbl" x="427" y="268" text-anchor="middle">53 x 7 grid</text>
+<rect x="522" y="228" width="160" height="52" rx="8" fill="#04260f" stroke="#39d353"/>
+<text class="f t" x="602" y="258" text-anchor="middle" fill="#69f0a0">contrib-heatmap.svg</text>
+<line x1="162" y1="254" x2="180" y2="254" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="332" y1="254" x2="350" y2="254" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+<line x1="502" y1="254" x2="520" y2="254" stroke="#8b949e" stroke-width="1.5" marker-end="url(#ar)"/>
+</g>
+
+<!-- profile column -->
+<g class="lane" style="animation-delay:1.4s">
+<rect x="706" y="48" width="140" height="262" rx="10" fill="#161b22" stroke="#39d353"/>
+<text class="f t" x="776" y="76" text-anchor="middle" fill="#c9d1d9">README.md</text>
+<text class="f lbl" x="776" y="96" text-anchor="middle">in the repo named</text>
+<text class="f lbl" x="776" y="112" text-anchor="middle">after you</text>
+<rect x="722" y="128" width="108" height="40" rx="4" fill="#04260f" stroke="#26a641" stroke-opacity=".6"/>
+<text class="f lbl" x="776" y="152" text-anchor="middle">heatmap</text>
+<rect x="722" y="176" width="50" height="70" rx="4" fill="#04260f" stroke="#26a641" stroke-opacity=".6"/>
+<text class="f lbl" x="747" y="215" text-anchor="middle">face</text>
+<rect x="778" y="176" width="52" height="70" rx="4" fill="#04260f" stroke="#26a641" stroke-opacity=".6"/>
+<text class="f lbl" x="804" y="215" text-anchor="middle">card</text>
+<text class="f lbl" x="776" y="276" text-anchor="middle">&lt;img&gt; tags only,</text>
+<text class="f lbl" x="776" y="292" text-anchor="middle">motion lives in SVG</text>
+<line x1="682" y1="74" x2="704" y2="140" stroke="#39d353" stroke-width="1.5" marker-end="url(#ag)"/>
+<line x1="682" y1="164" x2="704" y2="190" stroke="#39d353" stroke-width="1.5" marker-end="url(#ag)"/>
+<line x1="682" y1="254" x2="704" y2="236" stroke="#39d353" stroke-width="1.5" marker-end="url(#ag)"/>
+</g>
+
+<rect x="20" y="340" width="10" height="10" rx="2" fill="#0c2d6b" stroke="#58a6ff"/><text class="f lbl" x="38" y="349">run by you or the workflow</text>
+<rect x="260" y="340" width="10" height="10" rx="2" fill="#04260f" stroke="#39d353"/><text class="f lbl" x="278" y="349">committed files GitHub renders</text>
+<rect x="520" y="340" width="10" height="10" rx="2" fill="none" stroke="#d29922" stroke-dasharray="3 2"/><text class="f lbl" x="538" y="349">automated daily</text>
+<text class="f lbl" x="20" y="372">The portrait and card change only when you rerun them. The heatmap rebuilds itself every day.</text>
+</svg>
